@@ -1,9 +1,11 @@
 FROM node:17-slim
 WORKDIR /usr/app
 
-# Install dependencies and build the project.
+# Install dependencies and TypeScript compiler
 COPY package.json package-lock.json ./
 RUN npm install
+RUN npm install -g typescript
+
 COPY . .
 RUN npm run build
 
