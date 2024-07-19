@@ -36,6 +36,7 @@ stages:
 
           - script: |
               npm install
+              npm install -g typescript
               npm run build
             displayName: "npm install, build and test"
 
